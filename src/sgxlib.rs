@@ -53,9 +53,8 @@ pub use sgx_no_tstd;
 #[cfg(feature = "sgx_rand")]
 pub use sgx_rand;
 
-#[cfg(all(feature = "sgx_tse", target_vendor = "teaclave"))]
-pub extern crate sgx_tse;
+#[cfg(feature = "sgx_tse")]
+pub use sgx_tse;
 
 #[cfg(feature = "sgx_unwind")]
 pub use sgx_unwind;
-

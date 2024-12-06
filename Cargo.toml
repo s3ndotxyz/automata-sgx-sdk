@@ -12,7 +12,7 @@ intel-sgx-sdk = "2.24.100"
 
 [features]
 default = ["sgx_types"]
-tstd_enclave = ["dcap", "sgx_trts", "sgx_types", "sgx_libc_pthread", "patch_rand", "patch_assert_fail"]
+tstd_enclave = ["dcap", "sgx_trts", "sgx_types", "sgx_libc_pthread", "patch_rand", "patch_assert_fail", "sgx_tse"]
 tstd_app = ["dcap", "sgx_types", "sgx_urts", "app"]
 builder = ["dep:automata-build-script"]
 sysroot = []
@@ -33,6 +33,7 @@ sgx_ffi = ["dep:sgx_ffi"]
 sgx_rand = ["dep:sgx_rand"]
 sgx_types = []
 sgx_trts = []
+sgx_tse = ["dep:sgx_tse"]
 sgx_unwind = ["dep:sgx_unwind"]
 
 [dependencies]
@@ -52,6 +53,7 @@ sgx_edl = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sd
 sgx_ffi = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", branch = "2.24_nightly_2024-02-01", optional = true }
 sgx_rand = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", branch = "2.24_nightly_2024-02-01", optional = true }
 sgx_unwind = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", branch = "2.24_nightly_2024-02-01", optional = true }
+sgx_tse = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", branch = "2.24_nightly_2024-02-01", optional = true }
 sgx-dcap-ql-rs = { git = "https://github.com/automata-network/SGXDataCenterAttestationPrimitives.git", branch = "automata_sgx_builder", optional = true }
 
 [target.'cfg(not(target_vendor = "teaclave"))'.dependencies]
