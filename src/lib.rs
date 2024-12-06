@@ -8,6 +8,7 @@ mod patch;
 
 pub mod app;
 pub mod dcap;
+pub mod tse;
 
 pub use ctor::ctor;
 

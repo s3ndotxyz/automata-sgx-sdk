@@ -12,11 +12,12 @@ intel-sgx-sdk = "2.24.100"
 
 [features]
 default = ["sgx_types"]
-tstd_enclave = ["dcap", "sgx_trts", "sgx_types", "sgx_libc_pthread", "patch_rand", "patch_assert_fail", "sgx_tse"]
+tstd_enclave = ["dcap", "sgx_trts", "sgx_types", "sgx_libc_pthread", "patch_rand", "patch_assert_fail", "tse"]
 tstd_app = ["dcap", "sgx_types", "sgx_urts", "app"]
 builder = ["dep:automata-build-script"]
 sysroot = []
 dcap = ["dep:sgx-dcap-ql-rs"]
+tse = ["sgx_tse"]
 app = []
 patch_rand = ["dummy_pthread_atfork"]
 patch_assert_fail = ["sgx_libc"]
