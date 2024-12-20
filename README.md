@@ -87,7 +87,7 @@ Follow the steps below to use Automata SGX SDK:
 
 3. Update the `app/Cargo.toml` file as follows. 
     
-    Explaination for the avaibale options of `package.metadata.sgx`:
+    Explanation for the avaibale options of `package.metadata.sgx`:
     - `path`: (required) Path to the enclave crate.
     - `config`: (required) Path to the enclave configuration file.
     - `edl`: (required) Path to the enclave EDL file.
@@ -157,7 +157,7 @@ Refer to the [Automata DCAP Attestation](https://github.com/automata-network/aut
 
 * [sgx-prover](https://github.com/automata-network/sgx-prover): A prover that supports to execute Scroll and Linea blocks in SGX enclave and generate the PoE (Proof of Execution).
 * [sgx-scaffold](https://github.com/automata-network/sgx-scaffold): A scaffold for creating an SGX enclave with Rust.
-* [sgx-revm](https://github.com/automata-network/revm-sgx): A PoC that embeded revm inside Intel SGX enclave.
+* [sgx-revm](https://github.com/automata-network/revm-sgx): A PoC that embedded revm inside Intel SGX enclave.
 
 ## Acknowledgements
 - [incubator-teaclave-sgx-sdk](https://github.com/apache/incubator-teaclave-sgx-sdk): The Automata SGX SDK is built on top of [https://github.com/automata-network/incubator-teaclave-sgx-sdk](https://github.com/automata-network/incubator-teaclave-sgx-sdk), which is a fork of `incubator-teaclave-sgx-sdk` and updated to work with the latest version of the Rust toolchain and Intel SGX SDK.
